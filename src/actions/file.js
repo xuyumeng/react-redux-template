@@ -21,3 +21,5 @@ export function handleDelete(id) {
         agent.del(cookies, url, id, DEL_FILE)
     };
 }
+
+
