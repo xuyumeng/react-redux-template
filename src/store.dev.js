@@ -1,6 +1,6 @@
 import { createStore, applyMiddleware } from 'redux'
 import thunk from 'redux-thunk';
-import DevTools from 'components/dev/devTools'
+import DevTools from './components/dev-tools/devTools'
 
 import { responsiveStoreEnhancer } from 'redux-responsive'
 import reducer from './reducer'

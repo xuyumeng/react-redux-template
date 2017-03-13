@@ -14,7 +14,7 @@ import routes from 'components/routes.react';
 import store from './store.dev'
 
 /* devTools */
-import DevTools from 'components/dev/devTools'
+import DevTools from './components/dev-tools/devTools'
 
 injectTapEventPlugin();
 

@@ -10,8 +10,6 @@ const routes = (
     <Route path="/admin-panel/" component={AppWrapper}>
         <IndexRoute component={MainPage} onEnter={requireAuth}/>
         <Route path="main" component={MainPage} onEnter={requireAuth}/>
-
-        <Route path="developing" component={Developing} onEnter={requireAuth}/>
     </Route>
 );
 

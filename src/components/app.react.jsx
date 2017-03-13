@@ -16,10 +16,10 @@ import {REQUESTING, FINISHED} from '../constants/RequestStatus'
 
 
 // Component
-import SideNavComponent from '../components/main/sideNav.wrapper.react'
-import AppBarComponent from '../components/main/appBar.react'
-import Alert from './dialogs/alert.dialog.react'
-import Info from './dialogs/info.snackbar.react'
+import SideNavComponent from './nav/sideNav.wrapper.react'
+import AppBarComponent from './nav/appBar.react'
+import Alert from './modals/alert.dialog.react'
+import Info from './modals/info.snackbar.react'
 
 const lightTheme = getMuiTheme({
     palette: {
@@ -104,7 +104,7 @@ class App extends PureComponent {
             <MuiThemeProvider muiTheme={lightTheme}>
                 <div>
                     <div>
-                        <AppBarComponent/>
+                        <AppBarComponent openSideNav={openSideNav}/>
                         <SideNavComponent user={user} sideNavAlwaysShows={sideNavAlwaysShows} sideNav={sideNav} closeSideNav={closeSideNav} updateNavMenu={updateNavMenu}/>
                         <div style={style.mainWrapper}>
                             {this.props.children}

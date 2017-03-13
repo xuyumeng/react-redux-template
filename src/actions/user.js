@@ -1,5 +1,5 @@
 import {SET_USER_INFO} from '../constants/ActionType';
-import request from 'superagent'
+import {get} from './helper/agent'
 import Cookies from 'js-cookie'
 
 function setUserInfo(text) {
@@ -13,18 +13,8 @@ export function fetchUserInfo(text) {
     return dispatch => {
         let cookies = Cookies.get('token');
 
-        // dispatch(requestQuestions());
+        const url = '/api/u/auth/info';
 
-        request.post('/api/u/auth/info')
-            .send({token: cookies})
-            .type('application/json')
-            .accept('application/json')
-            .end(function(err, res) {
-                try {
-                    dispatch(setUserInfo(res.body.data));
-                } catch (e) {
-                    console.log('Fetch user information request failed!');
-                }
-            });
+        return dispatch(get(cookies, url, SET_USER_INFO))
     };
 }
