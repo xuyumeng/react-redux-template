@@ -64,17 +64,17 @@ module.exports = {
                 loaders: ['react-hot', 'babel'],
                 include: path.join(__dirname, 'src')
             },
-            { 
+            {
                 test: /\.js$/,
                 include: path.join(__dirname, 'src'),
                 loader: 'babel-loader'
             },
-            { 
-                test: /\.css$/, 
+            {
+                test: /\.css$/,
                 loader: "style!css"
             },
             {
-                test: /\.scss$/, 
+                test: /\.scss$/,
                 loader: 'style!css!scss'
             },
             {
